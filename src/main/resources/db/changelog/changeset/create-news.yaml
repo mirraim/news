@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Liquibase
+      changes:
+        - createTable:
+            tableName: source
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(225)
+                  constraints:
+                    unique: true
+                    nullable: false
+        - createTable:
+            tableName: topic
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(225)
+                  constraints:
+                    unique: true
+                    nullable: false
+        - createTable:
+            tableName: news
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: source_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+              - column:
+                  name: topic_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: text
+                  constraints:
+                    unique: true
+                    nullable: false

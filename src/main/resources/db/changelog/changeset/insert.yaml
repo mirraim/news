@@ -1,0 +1,138 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Liquibase
+      comment: "create test data"
+      changes:
+        - insert:
+            tableName: source
+            columns:
+              - column:
+                  name: name
+                  value: "irbis.plus"
+        - insert:
+            tableName: source
+            columns:
+              - column:
+                  name: name
+                  value: "praktika.irbis.plus"
+        - insert:
+            tableName: topic
+            columns:
+              - column:
+                  name: name
+                  value: "Помощь юр. лицам"
+        - insert:
+            tableName: topic
+            columns:
+              - column:
+                  name: name
+                  value: "Помощь физ. лицам"
+        - insert:
+            tableName: topic
+            columns:
+              - column:
+                  name: name
+                  value: "О нас"
+        - insert:
+            tableName: topic
+            columns:
+              - column:
+                  name: name
+                  value: "Обновления сервиса"
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: source_id
+                  value: "1"
+              - column:
+                  name: topic_id
+                  value: "1"
+              - column:
+                  name: description
+                  value: "Обновления законодательства в 2022 году."
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: source_id
+                  value: "1"
+              - column:
+                  name: topic_id
+                  value: "1"
+              - column:
+                  name: description
+                  value: "Обновления законодательства в 2023 г."
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: source_id
+                  value: "1"
+              - column:
+                  name: topic_id
+                  value: "2"
+              - column:
+                  name: description
+                  value: "Рассказываем о том, как обезопасить себя от мошенников"
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: source_id
+                  value: "1"
+              - column:
+                  name: topic_id
+                  value: "3"
+              - column:
+                  name: description
+                  value: "Рассказываем о том, как отдыхают наши работники"
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: source_id
+                  value: "1"
+              - column:
+                  name: topic_id
+                  value: "3"
+              - column:
+                  name: description
+                  value: "Знакомим с нашими клиентами. Часть 1"
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: source_id
+                  value: "1"
+              - column:
+                  name: topic_id
+                  value: "3"
+              - column:
+                  name: description
+                  value: "Знакомим с нашими клиентами. Часть 2"
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: source_id
+                  value: "2"
+              - column:
+                  name: topic_id
+                  value: "4"
+              - column:
+                  name: description
+                  value: "Обновления сервиса;Знакомство с сервисом"
+        - insert:
+            tableName: news
+            columns:
+              - column:
+                  name: source_id
+                  value: "2"
+              - column:
+                  name: topic_id
+                  value: "4"
+              - column:
+                  name: description
+                  value: "Обновления сервиса;Нововведения во вкладке 'Суды'"
