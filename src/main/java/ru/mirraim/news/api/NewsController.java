@@ -12,7 +12,7 @@ import ru.mirraim.news.service.NewsService;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/news")
+@RequestMapping("/api/news")
 public class NewsController {
     private final NewsService newsService;
 

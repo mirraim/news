@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/sources")
+@RequestMapping("api/sources")
 public class SourceController {
         private final SourceService sourceService;
     @GetMapping
