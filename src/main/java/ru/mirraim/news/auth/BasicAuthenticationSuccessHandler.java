@@ -20,11 +20,11 @@ public class BasicAuthenticationSuccessHandler implements ServerAuthenticationSu
         return webFilterExchange.getChain().filter(exchange);
     }
 
-    private static String getHttpAuthHeaderValue(Authentication authentication){
-        return String.join(" ","Bearer",tokenFromAuthentication(authentication));
+    private static String getHttpAuthHeaderValue(Authentication authentication) {
+        return String.join(" ", "Bearer", tokenFromAuthentication(authentication));
     }
 
-    private static String tokenFromAuthentication(Authentication authentication){
+    private static String tokenFromAuthentication(Authentication authentication) {
         return JWTTokenService.generateToken(
                 authentication.getName(),
                 authentication.getCredentials(),

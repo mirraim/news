@@ -31,7 +31,7 @@ public class TestDataFactory {
                 new News(6L, IRBIS, ABOUT, "Знакомим с нашими клиентами. Часть 2"),
                 new News(7L, PRACTICA, UPDATE, "Обновления сервиса;Знакомство с сервисом"),
                 new News(8L, PRACTICA, UPDATE, "Обновления сервиса;Нововведения во вкладке \"Суды\"")
-                );
+        );
     }
 
     public static PageRequest getBasePageRequest() {
@@ -50,6 +50,6 @@ public class TestDataFactory {
     }
 
     public static NewsResponse getNewsResponse() {
-        return new NewsResponse(getNews(), 8,  1);
+        return new NewsResponse(getNews(), 8, 1);
     }
 }

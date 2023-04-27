@@ -22,6 +22,7 @@ class TopicServiceImplTest {
 
     @InjectMocks
     private TopicServiceImpl topicService;
+
     @Test
     void getTopics() {
         Mockito.when(topicRepository.findAll()).thenReturn(List.of(ABOUT));

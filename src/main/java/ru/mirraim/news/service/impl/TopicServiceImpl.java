@@ -14,10 +14,11 @@ import java.util.List;
 public class TopicServiceImpl implements TopicService {
 
     private final TopicRepository repository;
+
     @Override
     public List<Topic> getTopics() {
         List<Topic> topics = new ArrayList<>();
-        repository.findAll().forEach(topics :: add);
+        repository.findAll().forEach(topics::add);
         return topics;
     }
 }

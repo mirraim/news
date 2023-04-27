@@ -10,4 +10,4 @@ spring:
       ddl-auto: none
 
   liquibase:
-      enabled: true
+    enabled: true
