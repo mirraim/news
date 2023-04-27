@@ -28,7 +28,7 @@ public class UsernamePasswordAuthenticationBearer {
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
 
-        return  Mono.justOrEmpty(new UsernamePasswordAuthenticationToken(subject, null, authorities));
+        return Mono.justOrEmpty(new UsernamePasswordAuthenticationToken(subject, null, authorities));
 
     }
 }

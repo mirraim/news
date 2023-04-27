@@ -24,6 +24,7 @@ public class NewsServiceImpl implements NewsService {
     private final TopicRepository topicRepository;
 
     private final SourceRepository sourceRepository;
+
     @Override
     @Transactional
     public NewsResponse getAllNews(PageParams params) {
@@ -39,7 +40,7 @@ public class NewsServiceImpl implements NewsService {
         PageRequest pageRequest = PageRequest.of(request.getParams().getPage(),
                 request.getParams().getSize());
         Topic topic = new Topic(request.getId(), request.getName());
-        if (topic.getId() == 0){
+        if (topic.getId() == 0) {
             topic = topicRepository.findTopicByName(topic.getName());
         }
         Page<News> news = newsRepository.findAllByTopic(topic, pageRequest);

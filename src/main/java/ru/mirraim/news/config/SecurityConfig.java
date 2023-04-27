@@ -56,7 +56,7 @@ public class SecurityConfig {
         return http.build();
     }
 
-    private AuthenticationWebFilter basicAuthenticationFilter(){
+    private AuthenticationWebFilter basicAuthenticationFilter() {
         UserDetailsRepositoryReactiveAuthenticationManager authManager;
         AuthenticationWebFilter basicAuthenticationFilter;
         ServerAuthenticationSuccessHandler successHandler;
@@ -71,12 +71,12 @@ public class SecurityConfig {
 
     }
 
-    private AuthenticationWebFilter bearerAuthenticationFilter(){
+    private AuthenticationWebFilter bearerAuthenticationFilter() {
         AuthenticationWebFilter bearerAuthenticationFilter;
         Function<ServerWebExchange, Mono<Authentication>> bearerConverter;
         ReactiveAuthenticationManager authManager;
 
-        authManager  = new BearerTokenReactiveAuthenticationManager();
+        authManager = new BearerTokenReactiveAuthenticationManager();
         bearerAuthenticationFilter = new AuthenticationWebFilter(authManager);
         bearerConverter = new ServerHttpBearerAuthenticationConverter();
 

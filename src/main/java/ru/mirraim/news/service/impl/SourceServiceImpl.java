@@ -17,7 +17,7 @@ public class SourceServiceImpl implements SourceService {
     @Override
     public List<Source> getSources() {
         List<Source> sources = new ArrayList<>();
-        repository.findAll().forEach(sources :: add);
+        repository.findAll().forEach(sources::add);
         return sources;
     }
 }

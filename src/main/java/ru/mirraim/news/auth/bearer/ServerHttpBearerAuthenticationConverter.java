@@ -14,7 +14,7 @@ public class ServerHttpBearerAuthenticationConverter implements Function<ServerW
 
     private static final String BEARER = "Bearer ";
     private static final Predicate<String> matchBearerLength = authValue -> authValue.length() > BEARER.length();
-    private static final Function<String,Mono<String>> isolateBearerValue = authValue -> Mono.justOrEmpty(authValue.substring(BEARER.length()));
+    private static final Function<String, Mono<String>> isolateBearerValue = authValue -> Mono.justOrEmpty(authValue.substring(BEARER.length()));
 
     private JWTCustomVerifier jwtVerifier = new JWTCustomVerifier();
 

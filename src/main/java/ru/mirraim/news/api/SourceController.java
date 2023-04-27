@@ -13,7 +13,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("api/sources")
 public class SourceController {
-        private final SourceService sourceService;
+    private final SourceService sourceService;
+
     @GetMapping
     public List<Source> getAllSources() {
         return sourceService.getSources();

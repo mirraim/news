@@ -39,7 +39,7 @@ public class JWTTokenService {
         return signedJWT.serialize();
     }
 
-    private static long getExpiration(){
+    private static long getExpiration() {
         return new Date().toInstant()
                 .plus(Period.ofDays(1))
                 .toEpochMilli();
